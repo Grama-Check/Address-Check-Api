@@ -28,7 +28,7 @@ func Prepare(ctx context.Context, db DBTX) (*Queries, error) {
 		return nil, fmt.Errorf("error preparing query CreatePerson: %w", err)
 	}
 	if q.getPersonStmt, err = db.PrepareContext(ctx, getPerson); err != nil {
-		return nil, fmt.Errorf("error preparing query getPerson: %w", err)
+		return nil, fmt.Errorf("error preparing query GetPerson: %w", err)
 	}
 	return &q, nil
 }
