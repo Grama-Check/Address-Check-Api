@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/jhivanb/code/Address-Check-Api'
+docker run --name postgresdb2 -p 5001:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:alpine3.16
+make: Leaving directory '/home/jhivanb/code/Address-Check-Api'
+ 
