@@ -7,7 +7,6 @@ import (
 
 	db "github.com/Grama-Check/Address-Check-Api/db/sqlc"
 	"github.com/Grama-Check/Address-Check-Api/models"
-	"github.com/Grama-Check/Address-Check-Api/util"
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
 )
@@ -21,7 +20,7 @@ func AddressCheck(c *gin.Context) {
 
 	conn, err := sql.Open(dbDriver, dbSource)
 	if err != nil {
-		c.AbortWithStatusJSON(http.StatusBadRequest, util.JsonError("Couldn't connect to database"))
+		c.AbortWithStatusJSON(http.StatusBadRequest, "Couldn't connect to database")
 
 		return
 	}
@@ -33,7 +32,7 @@ func AddressCheck(c *gin.Context) {
 	err = c.BindJSON(&person)
 
 	if err != nil {
-		c.AbortWithStatusJSON(http.StatusBadRequest, util.JsonError("Couldn't parse request body to json"))
+		c.AbortWithStatusJSON(http.StatusBadRequest, "Couldn't parse request body to json")
 		return
 	}
 

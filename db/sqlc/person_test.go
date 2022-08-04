@@ -12,7 +12,7 @@ func TestGetPerson(t *testing.T) {
 
 	person := createRandomPerson(t)
 
-	person2, err := testQueries.getPerson(context.Background(), person.Nic)
+	person2, err := testQueries.GetPerson(context.Background(), person.Nic)
 
 	require.NoError(t, err)
 	require.NotEmpty(t, person2)

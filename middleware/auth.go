@@ -8,7 +8,6 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/Grama-Check/Address-Check-Api/util"
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v4"
 )
@@ -33,17 +32,17 @@ func AuthMiddleWare() gin.HandlerFunc {
 		token := c.GetHeader("Authorization")
 
 		if len(token) == 0 {
-			c.AbortWithStatusJSON(http.StatusUnauthorized, util.JsonError("No token present"))
+			c.AbortWithStatusJSON(http.StatusUnauthorized, "No token present")
 		}
 
 		fields := strings.Fields(token)
 
 		if len(fields) < 2 {
-			c.AbortWithStatusJSON(http.StatusUnauthorized, util.JsonError("Single string no prefix"))
+			c.AbortWithStatusJSON(http.StatusUnauthorized, "Single string no prefix")
 		}
 
 		if strings.ToLower(fields[0]) != "bearer" {
-			c.AbortWithStatusJSON(http.StatusUnauthorized, util.JsonError("Incorrect prefix"))
+			c.AbortWithStatusJSON(http.StatusUnauthorized, "Incorrect prefix")
 
 		}
 		jwtString := fields[1]
