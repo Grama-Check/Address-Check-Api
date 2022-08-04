@@ -33,16 +33,19 @@ func AuthMiddleWare() gin.HandlerFunc {
 
 		if len(token) == 0 {
 			c.AbortWithStatusJSON(http.StatusUnauthorized, "No token present")
+			return
 		}
 
 		fields := strings.Fields(token)
 
 		if len(fields) < 2 {
 			c.AbortWithStatusJSON(http.StatusUnauthorized, "Single string no prefix")
+			return
 		}
 
 		if strings.ToLower(fields[0]) != "bearer" {
 			c.AbortWithStatusJSON(http.StatusUnauthorized, "Incorrect prefix")
+			return
 
 		}
 		jwtString := fields[1]

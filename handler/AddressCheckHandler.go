@@ -3,22 +3,30 @@ package handler
 import (
 	"context"
 	"database/sql"
+	"log"
 	"net/http"
 
 	db "github.com/Grama-Check/Address-Check-Api/db/sqlc"
 	"github.com/Grama-Check/Address-Check-Api/models"
+	"github.com/Grama-Check/Address-Check-Api/util"
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
 )
 
-const (
-	dbDriver = "postgres"
-	dbSource = "postgres://jhivan:25May2001@identitycheckserver.postgres.database.azure.com/postgres?sslmode=require"
-)
+var config util.Config
+
+func init() {
+	var err error
+	config, err = util.LoadConfig(".")
+	if err != nil {
+		log.Fatal("Cannot load config")
+
+	}
+}
 
 func AddressCheck(c *gin.Context) {
 
-	conn, err := sql.Open(dbDriver, dbSource)
+	conn, err := sql.Open(config.DBDriver, config.DBSource)
 	if err != nil {
 		c.AbortWithStatusJSON(http.StatusBadRequest, "Couldn't connect to database")
 
