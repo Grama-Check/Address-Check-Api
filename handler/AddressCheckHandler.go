@@ -13,7 +13,7 @@ import (
 
 const (
 	dbDriver = "postgres"
-	dbSource = "postgresql://root:secret@localhost:5001/persons?sslmode=disable"
+	dbSource = "postgres://jhivan:25May2001@identitycheckserver.postgres.database.azure.com/postgres?sslmode=require"
 )
 
 func AddressCheck(c *gin.Context) {
