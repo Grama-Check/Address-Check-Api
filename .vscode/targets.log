@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Aug  3 21:09:47 2022
+# Make data base, printed on Thu Aug  4 14:45:19 2022
 
 # Variables
 
@@ -15,7 +17,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
+WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # default
 .SHELLFLAGS := -c
 # automatic
@@ -25,13 +27,13 @@ WSLENV = VSCODE_WSL_EXT_LOCATION/up
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /home/jhivanb/code/Address-Check-Api
+CURDIR := /home/jhivanb/dev/Address-Check-Api
 # makefile
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-STARSHIP_SESSION_KEY = 6729185702913510
+STARSHIP_SESSION_KEY = 1441310757276712
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -45,7 +47,7 @@ GOPROXY = https://proxy.golang.org,direct
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/jhivanb/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/home/jhivanb/.pyenv/shims:/home/jhivanb/.local/share/nvm/v16.14.2/bin:/usr/local/go/bin:/home/jhivanb/golib/bin:/home/jhivanb/workspace/bin:/home/jhivanb/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/Jhiva/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Go/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Program Files/Ballerina/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/Jhiva/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Jhiva/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Jhiva/.jdks/corretto-1.8.0_322/bin:/mnt/c/Users/Jhiva/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/lib/flutter/bin:/mnt/c/tools/dart-sdk/bin:/mnt/c/Users/Jhiva/AppData/Roaming/Pub/Cache/bin:/mnt/c/Users/Jhiva/AppData/Local/Programs/oh-my-posh/bin:/mnt/c/Users/Jhiva/AppData/Local/gitkraken/bin:/mnt/c/Users/Jhiva/go/bin:/mnt/c/Users/Jhiva/AppData/Local/JetBrains/Toolbox/scripts:/snap/bin
+PATH = /home/jhivanb/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/home/jhivanb/.pyenv/shims:/home/jhivanb/.local/share/nvm/v16.14.2/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/go/bin:/home/jhivanb/golib/bin:/home/jhivanb/workspace/bin:/home/jhivanb/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/Jhiva/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Go/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Program Files/Ballerina/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/Jhiva/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Jhiva/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Jhiva/.jdks/corretto-1.8.0_322/bin:/mnt/c/lib/flutter/bin:/mnt/c/tools/dart-sdk/bin:/mnt/c/Users/Jhiva/AppData/Roaming/Pub/Cache/bin:/mnt/c/Users/Jhiva/AppData/Local/Programs/oh-my-posh/bin:/mnt/c/Users/Jhiva/AppData/Local/gitkraken/bin:/mnt/c/Users/Jhiva/go/bin:/mnt/c/Users/Jhiva/AppData/Local/JetBrains/Toolbox/scripts:/snap/bin
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
@@ -55,7 +57,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 PYENV_ROOT = /home/jhivanb/.pyenv
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-c064e32f-1289-43b3-9bd3-685f6cfeb48f.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-0d67f747-38bd-499d-a0e4-3194d5e4b461.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -63,11 +65,13 @@ VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-c064e32f-1289-43b3-9bd3-685f6cfeb48f.sock
 # environment
 nvm_current_version = v16.14.2
 # environment
-PWD = /home/jhivanb/code/Address-Check-Api
+PWD = /home/jhivanb/dev/Address-Check-Api
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/13_interop
+WSL_INTEROP = /run/WSL/10_interop
+# environment
+WT_SESSION = d4104b02-02bd-471d-8fdc-ee7dbbfa3850
 # environment
 GOMODCACHE = /home/jhivanb/golib/pkg/mod
 # environment
@@ -97,7 +101,7 @@ USER = jhivanb
 # makefile
 .DEFAULT_GOAL := postgres
 # environment
-NAME = DESKTOP-7K0P7BP
+NAME = Code
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -120,6 +124,8 @@ MFLAGS = -pqrR
 +F = $(notdir $+)
 # environment
 VSCODE_HANDLES_SIGPIPE = true
+# environment
+WT_PROFILE_ID = {07b52e3e-de2c-5db4-bd2d-ba144ed6c273}
 # default
 MAKEFILES := 
 # automatic
@@ -145,7 +151,7 @@ WSL_DISTRO_NAME = Ubuntu-20.04
 # environment
 STARSHIP_SHELL = fish
 # variable set hash-table stats:
-# Load=67/1024=7%, Rehash=0, Collisions=8/92=9%
+# Load=69/1024=7%, Rehash=0, Collisions=8/94=9%
 
 # Pattern-specific Variable Values
 
@@ -153,7 +159,7 @@ STARSHIP_SHELL = fish
 
 # Directories
 
-# . (device 2064, inode 1903): 13 files, no impossibilities.
+# . (device 2064, inode 182069): 13 files, no impossibilities.
 
 # 13 files, no impossibilities in 1 directories.
 
@@ -194,7 +200,7 @@ sqlc:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-03 14:46:28.35421603
+#  Last modified 2022-08-04 14:45:07.81408104
 #  File has been updated.
 #  Successfully updated.
 
@@ -257,8 +263,6 @@ migratedown:
 # strcache performance: lookups = 44 / hit rate = 40%
 # hash-table stats:
 # Load=26/8192=0%, Rehash=0, Collisions=1/44=2%
-# Finished Make data base on Wed Aug  3 21:09:47 2022
+# Finished Make data base on Thu Aug  4 14:45:19 2022
 
  
-make: *** No rule to make target 'all'.  Stop.
-

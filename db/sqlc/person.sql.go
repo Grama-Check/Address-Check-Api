@@ -34,13 +34,13 @@ func (q *Queries) CreatePerson(ctx context.Context, arg CreatePersonParams) (Per
 	return i, err
 }
 
-const getPerson = `-- name: getPerson :one
+const getPerson = `-- name: GetPerson :one
 SELECT nic, address, name FROM persons
 WHERE nic = $1
 LIMIT 1
 `
 
-func (q *Queries) getPerson(ctx context.Context, nic string) (Person, error) {
+func (q *Queries) GetPerson(ctx context.Context, nic string) (Person, error) {
 	row := q.queryRow(ctx, q.getPersonStmt, getPerson, nic)
 	var i Person
 	err := row.Scan(&i.Nic, &i.Address, &i.Name)
