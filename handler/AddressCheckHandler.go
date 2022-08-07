@@ -14,6 +14,7 @@ import (
 )
 
 var config util.Config
+var conn *sql.DB
 
 func init() {
 	var err error
@@ -22,15 +23,21 @@ func init() {
 		log.Fatal("Cannot load config")
 
 	}
+	conn, err = sql.Open(config.DBDriver, config.DBSource)
+
+	//conn, err := sql.Open(config.DBDriver, config.DBSource)
+	if err != nil {
+		log.Println("HELP")
+		return
+	}
+
 }
 
 func AddressCheck(c *gin.Context) {
-
-	conn, err := sql.Open(config.DBDriver, config.DBSource)
-	if err != nil {
+	var err error
+	if err := conn.Ping(); err != nil {
 		c.AbortWithStatusJSON(http.StatusBadRequest, "Couldn't connect to database")
 
-		return
 	}
 
 	query := db.New(conn)
