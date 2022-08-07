@@ -44,13 +44,22 @@ func AddressCheck(c *gin.Context) {
 		return
 	}
 
-	_, err = query.GetPerson(context.Background(), person.NIC)
+	person2, err := query.GetPerson(context.Background(), person.NIC)
 
-	if err != nil {
+	if err != nil || person2.Nic != person.NIC {
 		c.JSON(
 			http.StatusOK,
 			gin.H{
 				"exists": false,
+				"nic":    person.NIC,
+			},
+		)
+
+	} else {
+		c.JSON(
+			http.StatusOK,
+			gin.H{
+				"exists": true,
 				"nic":    person.NIC,
 			},
 		)
