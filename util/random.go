@@ -38,3 +38,9 @@ func RandomName() string {
 func RandomAddress() string {
 	return RandomString(15)
 }
+
+func StringFormat(s string) string {
+	fields := strings.Fields(strings.ToLower(s))
+
+	return strings.Join(fields, "")
+}

@@ -53,7 +53,7 @@ func AddressCheck(c *gin.Context) {
 
 	person2, err := query.GetPerson(context.Background(), person.NIC)
 
-	if err != nil || person2.Address != person.Address {
+	if err != nil || util.StringFormat(person2.Address) != util.StringFormat(person.Address) {
 		c.JSON(
 			http.StatusOK,
 			gin.H{
