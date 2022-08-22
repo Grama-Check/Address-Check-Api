@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: gramacheckaddresscheckapi
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 7070 
+    selector:
+        app: gramacheckaddresscheckapi
