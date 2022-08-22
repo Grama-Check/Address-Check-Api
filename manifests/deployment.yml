@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gramacheckaddresscheckapi 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gramacheckaddresscheckapi
+  template:
+    metadata:
+      labels:
+        app: gramacheckaddresscheckapi 
+    spec:
+      containers:
+        - name: gramacheckaddresscheckapi 
+          image: gramacheckservices.azurecr.io/gramacheckaddresscheckapi
+          ports:
+          - containerPort: 7070
