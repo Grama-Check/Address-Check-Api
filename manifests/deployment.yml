@@ -1,16 +1,16 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: gramacheckaddresscheckapi 
+  name: address-check
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gramacheckaddresscheckapi
+      app: address-check
   template:
     metadata:
       labels:
-        app: gramacheckaddresscheckapi 
+        app: address-check 
     spec:
       containers:
         - name: gramacheckaddresscheckapi 
