@@ -3,12 +3,8 @@ name: Trigger auto deployment for address-check
 # When this action will be executed
 on:
   # Automatically trigger it when detected changes in repo
-  push:
-    branches: 
-      [ master ]
-    paths:
-    - '**'
-    - '.github/workflows/address-check-AutoDeployTrigger-8402998f-75f9-4fff-8e2a-d60153507bbb.yml'
+  release:
+    types: [published]
 
   # Allow mannually trigger 
   workflow_dispatch:      
@@ -35,7 +31,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: gramacheckservices.azurecr.io/gramacheck/address-check:${{ github.sha }}
+          tags: gramacheckservices.azurecr.io/gramacheck/address-check:${{ github.event.release.tag_name }}
           file: ./Dockerfile
           context: ./
 
