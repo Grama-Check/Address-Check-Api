@@ -56,4 +56,4 @@ jobs:
             az containerapp registry set -n address-check-test -g asgardeo-intern-project --server gramacheckservices.azurecr.io --username  ${{ secrets.ADDRESSCHECKTEST_REGISTRY_USERNAME }} --password ${{ secrets.ADDRESSCHECKTEST_REGISTRY_PASSWORD }}
             num=${{ github.event.release.tag_name }}
             suffix=$(echo $num | sed 's/\./\-/g')
-            az containerapp update -n address-check -g asgardeo-intern-project --revision-suffix $suffix --image gramacheckservices.azurecr.io/gramacheck/address-check-test:${{ github.event.release.tag_name }}
+            az containerapp update -n address-check-test -g asgardeo-intern-project --revision-suffix $suffix --image gramacheckservices.azurecr.io/gramacheck/address-check-test:${{ github.event.release.tag_name }}
